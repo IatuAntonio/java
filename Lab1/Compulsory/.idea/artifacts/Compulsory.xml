@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Compulsory">
+    <output-path>$PROJECT_DIR$/out/artifacts/Compulsory</output-path>
+    <root id="root">
+      <element id="module-source" name="Compulsory" />
+    </root>
+  </artifact>
+</component>
