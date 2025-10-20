@@ -1,0 +1,13 @@
+#spring.application.name=Homework
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
