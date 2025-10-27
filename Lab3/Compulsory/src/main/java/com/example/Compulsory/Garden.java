@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Garden {
 
-    private WaterPumpService pumpFromContructor;
+    private final WaterPumpService pumpFromConstructor;
     private WaterPumpService pumpFromSetter;
     private WaterPumpService pumpFromMethod;
 
     @Autowired
     public Garden(WaterPumpService waterPumpService) {
         System.out.println("[Garden] Constructor injection");
-        this.pumpFromContructor = waterPumpService;
+        this.pumpFromConstructor = waterPumpService;
     }
 
     @Autowired
@@ -34,7 +34,7 @@ public class Garden {
 
     public void waterPlants() {
         System.out.println("[Garden] Watering plants...");
-        pumpFromContructor.pumpWater();
+        pumpFromConstructor.pumpWater();
         pumpFromField.pumpWater();
         pumpFromSetter.pumpWater();
         pumpFromMethod.pumpWater();
