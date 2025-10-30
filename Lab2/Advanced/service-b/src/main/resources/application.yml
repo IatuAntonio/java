@@ -1,0 +1,17 @@
+#spring.application.name=service-b
+
+spring:
+    application:
+        name: service-b
+
+    config:
+        import: "configserver:http://localhost:8080"
+
+    profiles:
+        active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info

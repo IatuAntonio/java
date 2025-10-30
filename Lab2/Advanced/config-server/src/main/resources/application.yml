@@ -1,0 +1,19 @@
+#spring.application.name=config-server
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:///D:/Faculty/advanced-config-repo
+          uri: https://github.com/IatuAntonio/advanced-config-repo
+          default-label: main
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info

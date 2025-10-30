@@ -1,0 +1,17 @@
+#spring.application.name=service-a
+
+spring:
+  application:
+    name: service-a
+
+  config:
+    import: "configserver:http://localhost:8080"
+
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
