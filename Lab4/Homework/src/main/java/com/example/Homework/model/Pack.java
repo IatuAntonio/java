@@ -1,20 +1,23 @@
-package com.example.Compulsory.model;
-
+package com.example.Homework.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "students")
-public class Student {
+@Table(name = "packs")
+public class Pack {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String code;
-    private String name;
-    private String email;
     private int year;
+    private int semester;
+    private String name;
+
+    @OneToMany(mappedBy = "pack")
+    private List<Course> courses;
 
     public Long getId() {
         return id;
@@ -24,12 +27,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public String getName() {
@@ -40,12 +43,12 @@ public class Student {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public int getSemester() {
+        return semester;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setSemester(int semester) {
+        this.semester = semester;
     }
 
     public int getYear() {

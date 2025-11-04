@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Compulsory</artifactId>
+	<artifactId>Homework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Compulsory</name>
-	<description>Compulsory Lab4</description>
+	<name>Homework</name>
+	<description>Homework Lab4</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,6 +38,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
